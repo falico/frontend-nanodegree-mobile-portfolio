@@ -505,10 +505,9 @@ function updatePositions() {
   var itemsLength = items.length;
   for (var i = 0; i < itemsLength; i++) {
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    var left = items[i].basicLeft + 100 * phase + 'px';
+    var left = -items[i].basicLeft + 100 * phase + 'px';
     // items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
-    // items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
-    items[i].style.transform = "translateX("+-left+") translateZ(0)";
+    items[i].style.transform = "translateX("+left+") translateZ(0)";
 
   }
 
